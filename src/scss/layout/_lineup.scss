@@ -12,7 +12,7 @@
 
     .dia {
         text-transform: uppercase;
-        margin-bottom: 5rem;
+        margin-bottom: 5rem 0;
     }
 }
 
@@ -38,20 +38,42 @@
                 margin: 2rem auto 0 auto;
             }
         }
-    }
+    }   
 }
 
 .edm .nombre-escenario:after{
-    background-image: url(../../img/icono_edm.png);
+    background-image: url(../../../build/img/icono_edm.webp);
 }
 
-.rock, .nombre-escenario:after{
-    background-image: url(../../img/imagen_rock.jpg);
+.rock .nombre-escenario:after{
+    background-image: url(../../../build/img/icono_rock.webp);
+}
+
+.calendario{
+    @include m.resetear-lista;
+    li{
+        padding: 2.5rem;
+        font-weight: 700;
+
+            span{
+                font-weight: 400;
+            }
+    }
 }
 
 .bg-amarillo{
     background-color: v.$amarillo;
+
+    li:nth-child(odd){ //NTH-CHILD ES UNA FUNCION PARA TOMAR UN ELEMENTO HIJO DE UNA CLASE, ODD TOMA ELEMENTOS IMPARES (1,3,5)
+        background-color: darken(v.$amarillo, 14%); //Darken es una propiedad de sass en el que oscurese un color, toma dos parametros
+        //color y el porcentaje que lo va a obscurecer
+    }
 }
 .bg-verde{
     background-color: v.$verde;
+
+    li:nth-child(odd){ //NTH-CHILD ES UNA FUNCION PARA TOMAR UN ELEMENTO HIJO DE UNA CLASE, ODD TOMA ELEMENTOS IMPARES (1,3,5)
+        background-color: darken(v.$verde, 10%); //Darken es una propiedad de sass en el que oscurese un color, toma dos parametros
+        //color y el porcentaje que lo va a obscurecer
+    }
 }

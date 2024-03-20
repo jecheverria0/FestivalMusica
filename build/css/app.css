@@ -560,7 +560,7 @@ img {
 }
 .lineup .dia {
   text-transform: uppercase;
-  margin-bottom: 5rem;
+  margin-bottom: 5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -588,17 +588,36 @@ img {
 }
 
 .edm .nombre-escenario:after {
-  background-image: url(../../img/icono_edm.png);
+  background-image: url(../../../build/img/icono_edm.webp);
 }
 
-.rock, .nombre-escenario:after {
-  background-image: url(../../img/imagen_rock.jpg);
+.rock .nombre-escenario:after {
+  background-image: url(../../../build/img/icono_rock.webp);
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
 }
 
 .bg-amarillo {
   background-color: #FEF46D;
 }
+.bg-amarillo li:nth-child(odd) {
+  background-color: #feef26;
+}
 
 .bg-verde {
   background-color: #4CB8B3;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: #3b9691;
 }
